@@ -27,6 +27,9 @@ int main() {
         std::cout << name << std::endl;
     });
 
+    runCode([]() -> void {
+        std::cout << "Hello World" << std::endl;
+    });
     return 0;
 }
 
