@@ -2,9 +2,12 @@
 #include <vector>
 #include <string>
 
+typedef void(*function)();
+
 void forEach(std::string txt, void(*func)(char));
 void forEach(std::vector<int> arr, void(*func)(int));
 void forEach(std::vector<std::string> arr, void(*func)(std::string));
+void runCode(function cb);
 
 int main() {
     
@@ -46,4 +49,9 @@ void forEach(std::vector<std::string> arr, void(*func)(std::string)) {
     for(int i = 0; i < arr.size(); i++) {
         func(arr[i]);
     }
+}
+
+//Typedef Function
+void runCode(function cb){
+    cb();
 }
