@@ -16,6 +16,7 @@ void printElement(int element) {
 
 int main() {
     int myArray[] = {1, 2, 3, 4, 5};
+    void(*func[])(int) = {printElement};
     int arraySize = sizeof(myArray) / sizeof(myArray[0]);
     
     forEach(myArray, arraySize, printElement);
